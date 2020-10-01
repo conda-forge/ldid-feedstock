@@ -10,7 +10,7 @@ source:
   git_rev: v{{ version }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   detect_binary_files_with_prefix: False  # [osx]
   ignore_run_exports:
@@ -20,6 +20,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - ldid     # [build_platform != target_platform and target_platform == "osx-arm64"]
   host:
     - openssl  # [not osx]
 

@@ -13,3 +13,7 @@ $CXX $CXXFLAGS -I. -O3 -g0 -o ldid ldid.o lookup2.o $LDFLAGS
 mkdir -p $PREFIX/bin
 cp ldid $PREFIX/bin
 
+if [[ "$target_platform" != "$build_platform" && "$target_platform" == "osx-arm64" ]]; then
+  $BUILD_PREFIX/bin/ldid -S $PREFIX/bin/ldid
+fi
+
