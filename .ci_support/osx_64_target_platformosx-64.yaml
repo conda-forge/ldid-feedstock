@@ -1,18 +1,21 @@
 MACOSX_DEPLOYMENT_TARGET:
-- '11.0'
+- '10.9'
 c_compiler:
-- clang
+- clang_bootstrap
 c_compiler_version:
-- '11'
+- '10'
 channel_sources:
-- conda-forge/label/llvm_rc,conda-forge,https://conda-web.anaconda.org/conda-forge
+- conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- clangxx
+- clang_bootstrap
 cxx_compiler_version:
-- '11'
+- '10'
 macos_machine:
-- arm64-apple-darwin20.0.0
+- x86_64-apple-darwin13.4.0
 target_platform:
-- osx-arm64
+- osx-64
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
