@@ -1,5 +1,5 @@
 {% set name = "ldid" %}
-{% set version = "2.1.2" %}
+{% set version = "2.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +10,7 @@ source:
   git_rev: v{{ version }}
 
 build:
-  number: 3
+  number: 0
   skip: True  # [win]
   ignore_run_exports:
     - libcxx   # [osx]
